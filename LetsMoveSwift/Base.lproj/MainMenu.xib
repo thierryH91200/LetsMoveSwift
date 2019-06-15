@@ -690,9 +690,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6aE-Io-Sbm">
-                        <rect key="frame" x="104" y="152" width="271" height="57"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6aE-Io-Sbm">
+                        <rect key="frame" x="122" y="152" width="237" height="56"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Let's move!" id="ANW-ao-tsw">
                             <font key="font" metaFont="system" size="48"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -700,6 +699,10 @@
                         </textFieldCell>
                     </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="6aE-Io-Sbm" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="cWO-Xx-8aN"/>
+                    <constraint firstItem="6aE-Io-Sbm" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="klT-ud-i4W"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="139" y="-120"/>
         </window>

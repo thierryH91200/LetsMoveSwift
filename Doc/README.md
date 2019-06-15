@@ -1,9 +1,24 @@
+<p align="center">
+<img src="https://img.shields.io/badge/Swift-5.0-orange.svg" />
+<img src="https://img.shields.io/badge/platforms-mac-brightgreen.svg?style=flat" alt="Mac" />
+</p>
+
+
+
+
 LetsMove
 ========
 
 A sample project that demonstrates how to move a running Mac OS X application to the Applications folder.
 
-![Screenshot](http://i.imgur.com/euTRZiI.png)
+
+<p align="center">
+<img src="doc/LetsMeMove.png" alt="Sample">
+<p align="center">
+<em>A skeleton app showing ModernLook-OSX in action</em>
+</p>
+</p>
+
 
 
 Requirements
@@ -11,19 +26,21 @@ Requirements
 Builds and runs on Mac OS X 10.6 or higher. Does NOT support sandboxed applications.
 
 
+ Delete Item
+
 [[[NSWorkspace sharedWorkspace] performFileOperation:NSWorkspaceRecycleOperation]
 This is deprecated, as of OS X 10.11, so no point in using it.
 
 [[NSWorkspace sharedWorkspace] recycleURLs:]
 This is probably the one you want. It's asynchronous, so your application can continue to operate while the files are being moved to the trash.
 
-[NSFileManager trashItemAtURL:]
+FileManager.default.trashItem(AtURL:)
 This is similar to option 2, but it's synchronous, and only handles one file at a time.
 
-[NSFileManager removeItemAtPath:]
+FileManager.default.removeItem(AtPath:)
 This doesn't trash the file, it deletes it permanently, and immediately.
 
-[NSFileManager removeItemAtURL:]
+FileManager.default.removeItemAtURL:]
 This is just like option 4, except using a file:// URL instead of a path. More-convenient when you already have a URL rathe than a path.
 
 
@@ -41,16 +58,15 @@ Option 2:
 
 Copy the following files into your project:
 
-- PFMoveApplication.h
-- PFMoveApplication.m
+- MoveApplication.strings
+- MoveApplication.swift
 
-If your project has ARC enabled, you'll want to disable ARC on the above files. You can do so by adding -fno-objc-arc compiler flag to your PFMoveApplication.m source file. See http://stackoverflow.com/questions/6646052/how-can-i-disable-arc-for-a-single-file-in-a-project/6658549#6658549
 
 If your application is localized, also copy the 'MoveApplication.string' files into your project.
 
 Link your application against Security.framework.
 
-In your app delegate's "-[applicationWillFinishLaunching:]" method, call the PFMoveToApplicationsFolderIfNecessary function at the very top.
+In your app delegate's "applicationWillFinishLaunching" method, call the MoveToApplicationsFolderIfNecessary function at the very top.
 
 
 License
@@ -100,4 +116,3 @@ Translators:
 * aONe (Catalan)
 * Marek Hrusovsky (Slovak)
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)

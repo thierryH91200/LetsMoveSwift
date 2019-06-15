@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationWillFinishLaunching(_ aNotification: Notification) {
-        moveToApplicationsFolder()
+        LetsMove.shared.moveToApplicationsFolderIfNecessary()
         
     }
     
