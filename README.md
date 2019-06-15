@@ -15,7 +15,7 @@ A sample project that demonstrates how to move a running Mac OS X application to
 <p align="center">
 <img src="doc/LetsMeMove.png" alt="Sample">
 <p align="center">
-<em>A skeleton app showing ModernLook-OSX in action</em>
+<em>A skeleton app showing LetsMeMove in action</em>
 </p>
 </p>
 
