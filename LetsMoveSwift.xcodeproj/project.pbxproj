@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0308E04A22B51B6D0045A8A6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0308E04C22B51B6D0045A8A6 /* MainMenu.xib */; };
+		0308E06622B5526F0045A8A6 /* LetsMeMove.png in Resources */ = {isa = PBXBuildFile; fileRef = 0308E06522B5526F0045A8A6 /* LetsMeMove.png */; };
 		03143EDF22B2335900FCABA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03143EDE22B2335900FCABA5 /* AppDelegate.swift */; };
 		03143EE122B2335B00FCABA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03143EE022B2335B00FCABA5 /* Assets.xcassets */; };
 		03143EF022B2335B00FCABA5 /* LetsMoveSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03143EEF22B2335B00FCABA5 /* LetsMoveSwiftTests.swift */; };
@@ -49,6 +50,7 @@
 		0308E05E22B51B9B0045A8A6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MoveApplication.strings; sourceTree = "<group>"; };
 		0308E05F22B51B9F0045A8A6 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/MoveApplication.strings; sourceTree = "<group>"; };
 		0308E06022B51BA40045A8A6 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/MoveApplication.strings; sourceTree = "<group>"; };
+		0308E06522B5526F0045A8A6 /* LetsMeMove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LetsMeMove.png; sourceTree = "<group>"; };
 		03143EDB22B2335900FCABA5 /* LetsMoveSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsMoveSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03143EDE22B2335900FCABA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03143EE022B2335B00FCABA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		0308E06122B51CC70045A8A6 /* Doc */ = {
 			isa = PBXGroup;
 			children = (
+				0308E06522B5526F0045A8A6 /* LetsMeMove.png */,
 			);
 			path = Doc;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				0362838422B267B9003B1440 /* MoveApplication.strings in Resources */,
 				03143EE122B2335B00FCABA5 /* Assets.xcassets in Resources */,
 				034217C822B4BDFE00A6FD32 /* README.md in Resources */,
+				0308E06622B5526F0045A8A6 /* LetsMeMove.png in Resources */,
 				0308E04A22B51B6D0045A8A6 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
