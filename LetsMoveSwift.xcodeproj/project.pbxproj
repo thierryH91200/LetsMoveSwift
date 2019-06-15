@@ -93,7 +93,6 @@
 		0308E06122B51CC70045A8A6 /* Doc */ = {
 			isa = PBXGroup;
 			children = (
-				034217C722B4BDFE00A6FD32 /* README.md */,
 			);
 			path = Doc;
 			sourceTree = "<group>";
@@ -101,6 +100,7 @@
 		03143ED222B2335900FCABA5 = {
 			isa = PBXGroup;
 			children = (
+				034217C722B4BDFE00A6FD32 /* README.md */,
 				0308E06122B51CC70045A8A6 /* Doc */,
 				03143EDD22B2335900FCABA5 /* LetsMoveSwift */,
 				03143EEE22B2335B00FCABA5 /* LetsMoveSwiftTests */,
