@@ -24,8 +24,6 @@ class LetsMove : NSObject {
     
     let fileManager = FileManager.default
 
-
-    
     // Main worker function
     func moveToApplicationsFolderIfNecessary() {
         
@@ -70,9 +68,7 @@ class LetsMove : NSObject {
         
         // Setup the alert
         let alert = NSAlert()
-        
         alert.messageText = installToUserApplications ? moveStrings.questionTitleHome : moveStrings.questionTitle
-        
         var informativeText = moveStrings.questionMessage
         
         if isNeedAuthorization == true {
@@ -102,7 +98,7 @@ class LetsMove : NSObject {
         }
         
         // Activate app -- work-around for focus issues related to "scary file from internet" OS dialog.
-        if !NSApp.isActive {
+        if NSApp.isActive == false {
             NSApp.activate(ignoringOtherApps: true)
         }
         
@@ -121,8 +117,9 @@ class LetsMove : NSObject {
             } else {
                 // If a copy already exists in the Applications folder, put it in the Trash
                 if fileManager.fileExists(atPath: destinationURL.absoluteString) {
+                    
                     // But first, make sure that it's not running
-                    if isApplicationAtPathRunning(path: destinationURL.absoluteString) {
+                    if isApplicationAtPathRunning(path: destinationURL.absoluteString) == true {
                         // Give the running app focus and terminate myself
                         print("INFO -- Switching to an already running version")
                         Process.launchedProcess(launchPath: "/usr/bin/open", arguments: [destinationURL.absoluteString]).waitUntilExit()
@@ -163,7 +160,6 @@ class LetsMove : NSObject {
             UserDefaults.standard.set(true, forKey:AlertSuppressKey)
         }
     }
-    
     
     // Return the preferred install location.
     // Assume that if the user has a ~/Applications folder, they'd prefer their
@@ -234,7 +230,7 @@ class LetsMove : NSObject {
         // Use the new API on 10.6 or higher to determine if the app is already running
         for runningApplication in NSWorkspace.shared.runningApplications {
             let executablePath = runningApplication.executableURL!.path
-            if executablePath.hasPrefix(path) {
+            if executablePath.hasPrefix(path) == true {
                 return true
             }
         }
