@@ -11,6 +11,24 @@
 
 //
 
+//Delete Item
+//
+//[[[NSWorkspace sharedWorkspace] performFileOperation:NSWorkspaceRecycleOperation]
+//    This is deprecated, as of OS X 10.11, so no point in using it.
+//
+//    [[NSWorkspace sharedWorkspace] recycleURLs:]
+//    This is probably the one you want. It's asynchronous, so your application can continue to operate while the files are being moved to the trash.
+//
+//    FileManager.default.trashItem(AtURL:)
+//    This is similar to option 2, but it's synchronous, and only handles one file at a time.
+//
+//    FileManager.default.removeItem(AtPath:)
+//    This doesn't trash the file, it deletes it permanently, and immediately.
+//
+//    FileManager.default.removeItemAtURL:]
+//This is just like option 4, except using a file:// URL instead of a path. More-convenient when you already have a URL rathe than a path.
+
+
 import AppKit
 import Security
 
