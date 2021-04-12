@@ -56,9 +56,7 @@ class LetsMove : NSObject {
             let infoInDownloads = NSLocalizedString("This will keep your Downloads folder uncluttered.", tableName: "MoveApplication", comment: "")
         }
         
-        let moveStrings : MoveStrings = MoveStrings()
-        
-        
+        let moveStrings = MoveStrings()
         
         // Skip if user suppressed the alert before
         guard UserDefaults.standard.bool(forKey: AlertSuppressKey) == false else { return }
@@ -74,7 +72,6 @@ class LetsMove : NSObject {
         let (applicationsDirectory, installToUserApplications) = PreferredInstallLocation()
         let bundleName = bundleNameURL!.lastPathComponent
         let destinationURL = applicationsDirectory!.appendingPathComponent(bundleName)
-        
         
         // Check if we need admin password to write to the Applications directory
         // Check if the destination bundle is already there but not writable
@@ -304,7 +301,7 @@ class LetsMove : NSObject {
         }
         return true
     }
-    
+
     
     func copyBundle(srcPath: String, dstPath: String) -> Bool {
         
